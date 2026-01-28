@@ -1,0 +1,52 @@
+{
+  "cotton": {
+    "price": "₹6,500 – ₹7,200 per quintal",
+    "market": "Major markets: Nagpur, Wardha, Akola",
+    "updated": "Today"
+  },
+  "soybean": {
+    "price": "₹4,500 – ₹5,200 per quintal",
+    "market": "Major markets: Latur, Hingoli, Indore",
+    "updated": "Today"
+  },
+  "wheat": {
+    "price": "₹2,100 – ₹2,400 per quintal",
+    "market": "Major markets: Pune, Indore, Kota",
+    "updated": "Today"
+  },
+  "rice": {
+    "price": "₹2,000 – ₹2,800 per quintal",
+    "market": "Major markets: Kolhapur, Raipur, Kurnool",
+    "updated": "Today"
+  },
+  "maize": {
+    "price": "₹1,900 – ₹2,300 per quintal",
+    "market": "Major markets: Davangere, Nizamabad",
+    "updated": "Today"
+  },
+  "onion": {
+    "price": "₹1,200 – ₹2,500 per quintal",
+    "market": "Major markets: Lasalgaon, Pune",
+    "updated": "Today"
+  },
+  "potato": {
+    "price": "₹900 – ₹1,600 per quintal",
+    "market": "Major markets: Agra, Indore",
+    "updated": "Today"
+  },
+  "sugarcane": {
+    "price": "₹3,100 – ₹3,400 per quintal",
+    "market": "Major markets: Kolhapur, Sangli",
+    "updated": "Today"
+  },
+  "groundnut": {
+    "price": "₹5,200 – ₹6,200 per quintal",
+    "market": "Major markets: Rajkot, Anantapur",
+    "updated": "Today"
+  },
+  "tur": {
+    "price": "₹6,800 – ₹8,200 per quintal",
+    "market": "Major markets: Latur, Gulbarga",
+    "updated": "Today"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "cotton": {
+    "basal": "Apply 50 kg Nitrogen, 25 kg Phosphorus, 25 kg Potash per hectare at sowing",
+    "top_dressing": "Apply remaining Nitrogen in two splits at 30 and 60 DAS",
+    "micronutrients": "Apply Zinc Sulphate 25 kg/ha once in 2–3 years"
+  },
+
+  "soybean": {
+    "basal": "Apply 30 kg Nitrogen, 60 kg Phosphorus, 40 kg Potash per hectare",
+    "top_dressing": "Not required due to nitrogen fixation",
+    "micronutrients": "Apply Sulphur 20 kg/ha"
+  },
+
+  "rice": {
+    "basal": "Apply 60 kg Nitrogen, 30 kg Phosphorus, 30 kg Potash per hectare",
+    "top_dressing": "Apply Nitrogen in 3 splits: transplanting, tillering, panicle initiation",
+    "micronutrients": "Apply Zinc Sulphate 25 kg/ha if deficiency appears"
+  },
+
+  "wheat": {
+    "basal": "Apply 60 kg Nitrogen, 40 kg Phosphorus, 40 kg Potash per hectare",
+    "top_dressing": "Apply remaining Nitrogen at first irrigation (20–25 DAS)",
+    "micronutrients": "Apply Zinc Sulphate if deficiency occurs"
+  },
+
+  "maize": {
+    "basal": "Apply 60 kg Nitrogen, 40 kg Phosphorus, 40 kg Potash per hectare",
+    "top_dressing": "Apply Nitrogen in two splits at knee-high and tasseling stage",
+    "micronutrients": "Apply Zinc Sulphate 25 kg/ha"
+  },
+
+  "sugarcane": {
+    "basal": "Apply 75 kg Nitrogen, 60 kg Phosphorus, 60 kg Potash per hectare",
+    "top_dressing": "Apply remaining Nitrogen in 2–3 splits up to 120 days",
+    "micronutrients": "Apply Ferrous Sulphate if iron deficiency is observed"
+  },
+
+  "tomato": {
+    "basal": "Apply 60 kg Nitrogen, 50 kg Phosphorus, 50 kg Potash per hectare",
+    "top_dressing": "Apply Nitrogen and Potash in 3–4 splits during flowering and fruiting",
+    "micronutrients": "Apply Calcium and Boron for better fruit quality"
+  },
+
+  "potato": {
+    "basal": "Apply 75 kg Nitrogen, 50 kg Phosphorus, 50 kg Potash per hectare",
+    "top_dressing": "Apply remaining Nitrogen at earthing-up stage",
+    "micronutrients": "Apply Magnesium if deficiency is seen"
+  },
+
+  "banana": {
+    "basal": "Apply 200 g Nitrogen, 60 g Phosphorus, 200 g Potash per plant",
+    "top_dressing": "Apply fertilizers in monthly splits up to 8 months",
+    "micronutrients": "Apply Zinc and Boron sprays at vegetative stage"
+  },
+
+  "onion": {
+    "basal": "Apply 50 kg Nitrogen, 40 kg Phosphorus, 40 kg Potash per hectare",
+    "top_dressing": "Apply Nitrogen in two splits at 30 and 45 DAS",
+    "micronutrients": "Apply Sulphur for better bulb development"
+  },
+
+  "groundnut": {
+    "basal": "Apply 20 kg Nitrogen, 40 kg Phosphorus, 40 kg Potash per hectare",
+    "top_dressing": "Generally not required",
+    "micronutrients": "Apply Gypsum 500 kg/ha at flowering stage"
+  },
+
+  "tur": {
+    "basal": "Apply 25 kg Nitrogen, 50 kg Phosphorus, 25 kg Potash per hectare",
+    "top_dressing": "Apply Nitrogen at 30 DAS if crop growth is poor",
+    "micronutrients": "Apply Zinc and Boron if deficiency occurs"
+  },
+
+  "grapes": {
+    "basal": "Apply well-decomposed FYM 10–15 tons/ha",
+    "top_dressing": "Apply NPK as per growth stage (vegetative, flowering, berry development)",
+    "micronutrients": "Apply Magnesium, Zinc, and Boron sprays"
+  },
+
+  "mango": {
+    "basal": "Apply FYM 20–25 kg per tree before monsoon",
+    "top_dressing": "Apply NPK after flowering and fruit set",
+    "micronutrients": "Apply Boron and Zinc sprays for fruit quality"
+  }
+}

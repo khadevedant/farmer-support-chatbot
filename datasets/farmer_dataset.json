@@ -1,0 +1,258 @@
+{
+  "greeting": [
+    {
+      "patterns": ["hi", "hello", "hey", "good morning", "good evening", "namaste"],
+      "responses": ["Hello! How can I help you today?", "Hi! What farming help do you need?"]
+    }
+  ],
+
+  "crop_recommendation": [
+    {
+      "patterns": ["crop for high rainfall", "high rainfall crop", "heavy rain crop"],
+      "responses": ["High rainfall areas are suitable for Rice, Rubber, Jute, Tea, and Sugarcane."]
+    },
+    {
+      "patterns": ["crop for black soil", "which crop for black soil", "black soil crop"],
+      "responses": ["Best crops for black soil: Cotton, Soybean, Wheat, Jowar, Sunflower."]
+    },
+    {
+      "patterns": ["crop for red soil", "red soil crop"],
+      "responses": ["Red soil supports Groundnut, Millet, Potato, and Ragi."]
+    },
+    {
+      "patterns": ["summer crop", "crop for summer"],
+      "responses": ["Best summer crops: Maize, Millet, Groundnut, Okra, Watermelon."]
+    },
+    {
+      "patterns": ["winter crop", "rabi crop"],
+      "responses": ["Best winter crops: Wheat, Mustard, Gram, Peas."]
+    },
+    {
+      "patterns": ["best crop for 28", "crop for 28 degree", "28c crop"],
+      "responses": ["Good crops for 28°C: Cotton, Tomato, Chili, Groundnut."]
+    },
+    {
+      "patterns": ["maharashtra crop", "best crop in maharashtra"],
+      "responses": ["Major crops in Maharashtra: Cotton, Sugarcane, Soybean, Grapes, Pomegranate."]
+    }
+  ],
+
+  "soil_info": [
+    {
+      "patterns": ["how to improve soil", "improve soil quality"],
+      "responses": ["Use compost, green manure, crop rotation, and reduce chemical fertilizer use to improve soil quality."]
+    },
+    {
+      "patterns": ["soil testing", "test soil", "soil report"],
+      "responses": ["You can test soil at your nearest Agriculture Department center or Krishi Vigyan Kendra (KVK)."]
+    }
+  ],
+
+  "fertilizer_guidance": [
+    {
+      "patterns": ["fertilizer for wheat", "best fertilizer wheat"],
+      "responses": ["Recommended NPK for wheat: 120:60:40. Use Urea, DAP, and MOP."]
+    },
+    {
+      "patterns": ["fertilizer for rice", "best fertilizer rice"],
+      "responses": ["Rice needs NPK ratio 100:40:40. Apply Urea and DAP in split doses."]
+    },
+    {
+      "patterns": ["organic fertilizer", "best organic fertilizer"],
+      "responses": ["Best organic fertilizers include cow dung, vermicompost, poultry manure, and green manure."]
+    },
+    {
+      "patterns": ["fertilizer for sugarcane"],
+      "responses": ["Sugarcane needs NPK 200:80:80 and organic manure for better yield."]
+    }
+  ],
+
+  "pest_control": [
+    {
+      "patterns": ["bollworm in cotton", "cotton bollworm"],
+      "responses": ["Control cotton bollworm using Emamectin Benzoate, Spinosad, or Chlorantraniliprole."]
+    },
+    {
+      "patterns": ["treat rice blast", "rice blast disease"],
+      "responses": ["Rice blast can be controlled using Tricyclazole 75WP and maintaining field drainage."]
+    },
+    {
+      "patterns": ["aphid control", "remove aphids"],
+      "responses": ["Aphids can be controlled using Neem oil, Imidacloprid, or releasing ladybugs."]
+    },
+    {
+      "patterns": ["whitefly control", "white fly pest"],
+      "responses": ["Spray Neem oil, Triazophos, or use yellow sticky traps to control whiteflies."]
+    }
+  ],
+
+  "irrigation": [
+    {
+      "patterns": ["best irrigation method", "irrigation types"],
+      "responses": ["Best irrigation methods include drip, sprinkler, furrow, and flood irrigation depending on crop."]
+    },
+    {
+      "patterns": ["drip irrigation benefits", "drip irrigation"],
+      "responses": ["Drip irrigation saves water, reduces weed growth, and increases fertilizer efficiency."]
+    }
+  ],
+
+  "weather_support": [
+    {
+      "patterns": ["will it rain", "rain today", "rain prediction"],
+      "responses": ["Please check IMD or Google Weather for accurate rainfall updates."]
+    },
+    {
+      "patterns": ["heavy rain warning", "storm alert"],
+      "responses": ["Check IMD cyclone warning system for high-accuracy storm alerts."]
+    },
+    {
+      "patterns": ["temperature today", "weather today"],
+      "responses": ["Please check Google Weather or IMD for live temperature updates."]
+    }
+  ],
+
+  "market_price": [
+    {
+      "patterns": ["cotton price", "cotton rate today"],
+      "responses": ["Cotton rates vary by district. Check APMC or e-NAM for latest prices."]
+    },
+    {
+      "patterns": ["soybean price", "soybean rate"],
+      "responses": ["Soybean price changes daily. Visit your local mandi or e-NAM."]
+    }  
+  ],
+
+  "government_schemes": [
+    {
+      "patterns": ["pm kisan scheme", "kisan scheme", "government scheme farmer"],
+      "responses": ["PM Kisan provides ₹6000 yearly to farmers in 3 installments. Apply on pmkisan.gov.in."]
+    },
+    {
+      "patterns": ["crop insurance", "pmfby", "crop loss scheme"],
+      "responses": ["PMFBY is a crop insurance scheme covering natural disasters. Apply through CSC or agriculture office."]
+    }
+  ],
+
+  "goodbye": [
+    {
+      "patterns": ["bye", "goodbye", "see you"],
+      "responses": ["Goodbye! Have a great farming day!", "See you soon! Stay safe!"]
+    }
+  ],
+  
+  "greetings": [
+    {
+      "patterns": [
+        "hi", "hello", "hey", "good morning", "good evening", "namaste",
+        "namaskar",        
+        "नमस्ते",           
+        "हाय",             
+        "नमस्कार"          
+      ],
+      "responses": [
+        "Hello! How can I help you today?",
+        "नमस्ते! मैं आपकी कैसे मदद कर सकता हूँ?",
+        "नमस्कार! मी तुम्हाला कशी मदत करू शकतो?"
+      ]
+    }
+  ],
+
+  "crop_recommendations": [
+    {
+      "patterns": [
+        "crop for high rainfall", "high rainfall crop", "heavy rain crop",
+        "बारिश वाले क्षेत्र की फसल",           
+        "जास्त पावसात कोणती पिके",            
+        "जास्त पाऊस पिके"
+      ],
+      "responses": [
+        "High rainfall areas are suitable for Rice, Rubber, Jute, Tea, and Sugarcane.",
+        "ज्यादा बारिश वाले क्षेत्रों में धान, रबर, जूट, चाय और गन्ना उपयुक्त हैं।",
+        "जास्त पावसाच्या भागात भात, रबर, जूट, चहा आणि ऊस चांगले उत्पन्न देतात."
+      ]
+    },
+
+    {
+      "patterns": [
+        "crop for black soil", "black soil crop",
+        "काली मिट्टी की फसल",           
+        "काळी माती पिके"                 
+      ],
+      "responses": [
+        "Best crops for black soil: Cotton, Soybean, Wheat, Jowar, Sunflower.",
+        "काली मिट्टी में कपास, सोयाबीन, गेहूं, ज्वार और सूरजमुखी उगाया जाता है।",
+        "काळ्या मातीमध्ये कापूस, सोयाबीन, गहू, ज्वारी आणि सुर्यफूल चांगले येतात."
+      ]
+    },
+
+    {
+      "patterns": [
+        "summer crop", "crop for summer",
+        "गर्मी की फसल",         
+        "उन्हाळ्यातील पिके"      
+      ],
+      "responses": [
+        "Best summer crops: Maize, Millet, Groundnut, Okra, Watermelon.",
+        "गर्मी में मक्का, बाजरा, मूंगफली, भिंडी और तरबूज उगाए जाते हैं।",
+        "उन्हाळ्यात मका, बाजरी, शेंगदाणा, भेंडी आणि कलिंगड घेतले जातात."
+      ]
+    }
+  ],
+
+  "fertilizer_guidances": [
+    {
+      "patterns": [
+        "fertilizer for wheat",
+        "गेहूं का खाद",        
+        "गव्हाचे खत"           
+      ],
+      "responses": [
+        "Recommended NPK for wheat: 120:60:40.",
+        "गेहूं के लिए अनुशंसित एनपीके 120:60:40 है।",
+        "गहू पिकासाठी शिफारस केलेले NPK 120:60:40 आहे."
+      ]
+    }
+  ],
+
+  "pest_controls": [
+    {
+      "patterns": [
+        "bollworm in cotton", "cotton bollworm",
+        "कपास में इल्ली",       
+        "कापसातील अळी"         
+      ],
+      "responses": [
+        "Use Emamectin Benzoate or Spinosad to control bollworm.",
+        "इल्ली नियंत्रण के लिए इमामेक्टिन बेंजोएट या स्पिनोसैड का उपयोग करें।",
+        "अळी नियंत्रणासाठी इमामेक्टिन बेंजोएट किंवा स्पिनोसॅड वापरा."
+      ]
+    }
+  ],
+
+  "weather_supports": [
+    {
+      "patterns": [
+        "will it rain", "rain today",
+        "आज बारिश होगी",       
+        "आज पाऊस येईल का"      
+      ],
+      "responses": [
+        "Please check IMD or Google Weather for accurate rainfall updates.",
+        "कृपया सही जानकारी के लिए IMD या Google Weather देखें।",
+        "योग्य माहितीकरिता IMD किंवा Google Weather तपासा."
+      ]
+    }
+  ],
+
+  "goodbyes": [
+    {
+      "patterns": ["bye", "goodbye", "see you", "अलविदा", "निघतो"],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "अलविदा! आपका दिन शुभ हो!",
+        "निघतो! तुमचा दिवस चांगला जाओ!"
+      ]
+    }
+  ]
+}

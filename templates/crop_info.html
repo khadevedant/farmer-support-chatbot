@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crop Information</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- FULL CROP INFORMATION PAGE WITH SEARCH, TABS, IMAGES, ANIMATION -->
+<section id="crops" class="py-20 px-6" x-data="cropData()">
+  <div class="max-w-7xl mx-auto">
+
+    <h2 class="text-4xl font-bold text-center text-green-800 mb-6">Crop Information</h2>
+    <p class="text-center text-gray-700 mb-10 max-w-2xl mx-auto">Find detailed information about Indian crops. Search, filter, and explore.</p>
+
+    <!-- Search Bar -->
+    <div class="flex justify-center mb-6">
+      <input type="text" x-model="search" placeholder="Search crops..." class="w-full md:w-1/2 px-4 py-3 rounded-full shadow focus:ring-2 focus:ring-green-400 focus:outline-none">
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex justify-center space-x-4 mb-10">
+      <button @click="tab='all'" :class="tabBtn('all')">All</button>
+      <button @click="tab='grains'" :class="tabBtn('grains')">Grains</button>
+      <button @click="tab='vegetables'" :class="tabBtn('vegetables')">Vegetables</button>
+      <button @click="tab='cash'" :class="tabBtn('cash')">Cash Crops</button>
+      <button @click="tab='fruits'" :class="tabBtn('fruits')">Fruits</button>
+    </div>
+
+    <!-- Crop Cards -->
+    <div class="grid md:grid-cols-3 gap-8">
+      <template x-for="crop in filteredCrops" :key="crop.name">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-4 cursor-pointer" @click="modalData=crop; showModal=true">
+          <img :src="crop.img" alt="" class="rounded-xl h-40 w-full object-cover mb-4" @error="fallback($event, crop.name)">
+          <h3 class="text-xl font-bold text-green-900 mb-1" x-text="crop.name"></h3>
+          <p class="text-gray-700 text-sm" x-text="crop.info"></p>
+        </div>
+      </template>
+    </div>
+
+  </div>
+
+
+<!-- Modal -->
+<div x-show="showModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50" x-transition>
+  <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-6" @click.away="showModal=false">
+    <h2 class="text-2xl font-bold text-green-800 mb-3" x-text="modalData.name"></h2>
+    <p class="text-gray-700 leading-relaxed" x-text="modalData.details"></p>
+    <button class="mt-5 px-4 py-2 bg-green-600 text-white rounded-lg" @click="showModal=false">Close</button>
+  </div>
+</div>
+
+</section>
+
+<script>
+function cropData() {
+  return {
+    tab: 'all',
+    search: '',
+    showModal: false,
+    modalData: {},
+
+    crops: [
+      { name: 'Wheat', category: 'grains', img: 'https://img.freepik.com/premium-photo/green-wheat-plant-details_330253-1758.jpg', info: 'Grows best in cool climate and loamy soil.', details: 'Wheat requires cool temperatures and well-drained loamy soil. It is mostly grown during the rabi season. Farmers must ensure proper irrigation during crown root initiation. Wheat is a major staple food in India and grows well in areas with moderate rainfall.' },
+      { name: 'Rice', category: 'grains', img: 'https://www.zojirushi.com/blog/wp-content/uploads/2016/01/riceplant03.jpg', info: 'Needs high rainfall or irrigation and clay soil.', details: 'Rice thrives in regions with abundant water and warm temperatures. It requires a controlled water supply through irrigation or rainfall. Clayey soil with good water retention is ideal. Rice is a major Kharif crop grown in India.' },
+      { name: 'Maize', category: 'grains', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkwrYV28WuDqgQ2xUjxBGw6lpg-eATyz6mMw&s', info: 'Requires sunlight, fertile soil and moderate water.', details: 'Maize is an important cereal crop grown widely in India. It grows well in warm climates with temperatures between 18°C and 27°C. The crop requires well-drained fertile soil and moderate rainfall. Maize is used for food, animal feed, and industrial products. It is usually ready for harvest in 90–120 days.' },
+
+      { name: 'Potato', category: 'vegetables', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2QiAflK5Mt5ydDi92otUT7y3YN5YpJT6EyJ0wHLEVAA&s', info: 'Grows in cool climate and fertile loamy soil.', details: 'Potato is an important vegetable crop grown across India. It grows best in cool climates with temperatures between 15°C and 25°C. The crop requires loose, well-drained soil rich in organic matter. Potatoes are mainly used as food and in processed products like chips. The crop is ready for harvest in about 90–110 days.' },
+      { name: 'Tomato', category: 'vegetables', img: 'https://bonnieplants.com/cdn/shop/articles/BONNIE_tomatoes_iStock-481349128-1800px_d5820803-320c-401d-a55c-92df3c204962.jpg?v=1753293158&width=1000', info: 'Needs warm climate and red loamy soil.', details: 'Tomato is a widely grown vegetable crop in India. It grows well in warm climates with temperatures between 20°C and 30°C. The crop requires well-drained fertile soil and regular irrigation. Tomatoes are rich in vitamins and used fresh or in processed products. The crop is ready for harvest in about 70–90 days.' },
+      { name: 'Onion', category: 'vegetables', img: 'https://mojimall.pk/cdn/shop/articles/onion_grown_from_seeds_-_grow_onion_from_seeds_guide_in_pakistan.jpg?v=1749035904&width=1100', info: 'Requires dry climate and well-drained soil.', details:'Onion is an important vegetable crop grown widely in India. It grows well in cool to moderate climates with temperatures between 13°C and 25°C. The crop requires well-drained loamy soil and proper irrigation. Onions are used as a vegetable and for medicinal purposes. The crop is usually ready for harvest in 90–120 days.' },
+
+      { name: 'Sugarcane', category: 'cash', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE_3sr0g297zn_6McEwnf8S4dHuqSlEImY0pthY02CQg&s', info: 'Needs high temperature and fertile soil.', details:'Sugarcane is a major cash crop grown widely in India. It grows best in warm and humid climates with temperatures between 20°C and 35°C. The crop requires deep fertile soil and good irrigation. Sugarcane is mainly used for making sugar, jaggery, and ethanol. It takes about 10–18 months to harvest depending on the variety.' },
+      { name: 'Cotton', category: 'cash', img: 'https://t4.ftcdn.net/jpg/06/84/31/79/360_F_684317966_Pn9qU1DEfW5zpwoj25znJ1i0VdaOM2Px.jpg', info: 'Grows in black soil with warm climate.', details:'Cotton is an important fiber crop grown widely in India. It grows well in warm climates with temperatures between 21°C and 30°C. The crop requires black soil with good drainage and moderate rainfall. Cotton is mainly used in the textile industry. The crop is ready for harvest in about 150–180 days.' },
+      { name: 'Coffee', category: 'cash', img: 'https://rukminim2.flixcart.com/image/480/640/xif0q/shopsy-plant-sapling/h/p/t/perennial-no-yes-coffee-tree-plant-1-punarva-original-imahyxrc44rvpghk.jpeg?q=90', info: 'Grows in cool regions with good rainfall.', details:'Coffee is an important plantation crop grown in hilly regions of India. It grows well in cool and humid climates with temperatures between 15°C and 28°C. The crop requires well-drained fertile soil and shade. Coffee plants need regular rainfall for good growth. Harvesting is usually done after 3–4 years of planting.' },
+
+      { name: 'Banana', category: 'fruits', img: 'https://exoticflora.in/cdn/shop/products/1_d8f4f8dd-4491-4571-9e9a-9556c926b629_900x.jpg?v=1620337729', info: 'Needs tropical climate and rich soil.', details:'Banana is an important fruit crop grown widely in India. It grows well in warm and humid climates with temperatures between 25°C and 35°C. The crop requires fertile, well-drained soil and regular irrigation. Bananas are rich in nutrients and eaten fresh or used in cooking. The crop is ready for harvest in about 9–12 months.' },
+      { name: 'Mango', category: 'fruits', img: 'https://5.imimg.com/data5/VV/KU/MY-11242929/natural-gir-kesar-mangoes-500x500-500x500.jpg', info: 'Grows in hot climate and well-drained soil.', details:'Mango is a major fruit crop known as the “King of Fruits” in India. It grows well in tropical and subtropical climates with temperatures between 24°C and 30°C. The crop requires well-drained loamy soil and moderate rainfall. Mango fruits are rich in vitamins and eaten fresh or processed. Trees usually start bearing fruit after 4–6 years.' },
+      { name: 'Grapes', category: 'fruits', img: 'https://www.ugaoo.com/cdn/shop/articles/shutterstock_593769218.jpg?v=1661866202', info: 'Requires dry climate and black soil.', details:'Grapes are an important fruit crop grown in India. They grow well in warm climates with temperatures between 15°C and 35°C. The crop requires well-drained loamy soil and proper irrigation. Grapes are eaten fresh, dried as raisins, or used for juice and wine. The crop is usually ready for harvest in 6–8 months.' }
+    ],
+
+    tabBtn(name) {
+      return this.tab === name ? 'px-4 py-2 bg-green-600 text-white rounded-full shadow' : 'px-4 py-2 bg-green-100 text-green-700 rounded-full';
+    },
+
+    get filteredCrops() {
+      return this.crops.filter(c =>
+        (this.tab === 'all' || c.category === this.tab) &&
+        c.name.toLowerCase().includes(this.search.toLowerCase())
+      );
+    },
+
+    // fallback sets a simple SVG placeholder with crop name when the image file is missing
+    fallback(event, name) {
+      const svg = encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='100%' height='100%' fill='#f3f4f6'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='36' fill='#4b5563'>${name}</text></svg>`);
+      event.target.src = `data:image/svg+xml;charset=UTF-8,${svg}`;
+    }
+  }
+}
+</script>
+
+</body>
+</html>
